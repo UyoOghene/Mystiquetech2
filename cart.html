@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - MystiqueTech</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <img class="logopic" src="./images/Elegant Purple _M_ Logo Design.png" alt="">
+            <h3 class="nav-title">Mystique<span>Tech</span></h3>
+        </div>
+                <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-list">           
+            <li class="navli"><a href="./index.html">Home</a></li>
+            <li class="navli"><a href="./shop.html">Shop</a></li>
+            <li class="navli"><a href="./cart.html">Cart <span id="cart-count"></span></a></li>
+        </ul>
+    </nav>
+
+    <main class="cart-container">
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-summary">
+            <h3>Total: <span id="cart-total">$0.00</span></h3>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MystiqueTech. All Rights Reserved.</p> 
+    </footer>
+    <script src="./products.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
