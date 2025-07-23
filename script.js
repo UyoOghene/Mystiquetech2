@@ -1,5 +1,3 @@
-// Initialize cart from localStorage or empty array
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Display products
 const productList = document.getElementById('product-list');
@@ -17,6 +15,9 @@ if (productList) {
     productList.appendChild(card);
   });
 }
+
+// Initialize cart from localStorage or empty array
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Add to cart function
 function addToCart(productId) {
@@ -170,3 +171,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+const checkout = document.querySelector('.checkout-btn');
+checkout.addEventListener('click',()=>{
+  const notification = document.createElement('div');
+  notification.className = 'checkoutnotification';
+  notification.textContent = 'Just give Uyo the total money in cash right now!';
+  document.body.appendChild(notification);
+  
+  setTimeout(() => {
+    notification.classList.add('fade-out');
+    setTimeout(() => notification.remove(), 500);
+  }, 4000);
+
+})
